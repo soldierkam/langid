@@ -1,6 +1,7 @@
 package org.kamionowski.langid;
 
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * User: soldier
@@ -8,5 +9,8 @@ import java.io.IOException;
  * Time: 23:35
  */
 public interface ModelReader {
-    Model read(String country) throws IOException;
+
+    Model read(String langId) throws IOException;
+
+    Set<String> knownLangIds() throws IOException;
 }

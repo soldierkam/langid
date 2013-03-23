@@ -1,5 +1,7 @@
 package org.kamionowski.langid;
 
+import java.util.List;
+
 /**
  * User: soldier
  * Date: 22.03.13
@@ -7,5 +9,7 @@ package org.kamionowski.langid;
  */
 public interface LangId {
 
-    String detect(String text);
+    LangResults detect(String text);
+
+    List<String> knownLanguages();
 }
